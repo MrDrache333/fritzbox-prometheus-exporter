@@ -37,16 +37,13 @@ Heimnetzübersicht > Netzwerkeinstellungen" has to be enabled.
 
 ### Using docker
 
-First you have to build the container: `docker build --tag fritzbox-prometheus-exporter:latest .`
-
-Then start the container:
-
 ```bash
-$ docker run -e 'USERNAME=your_fritzbox_username' \
+$ docker run \
+    -e 'USERNAME=your_fritzbox_username' \
     -e 'PASSWORD=your_fritzbox_password' \
     -e 'GATEWAY_URL="http://192.168.0.1:49000"' \
     -e 'LISTEN_ADDRESS="0.0.0.0:9042"' \
-    fritzbox-prometheus-exporter:latest
+    kehrhardt/fritzbox_exporter:latest
 ```
 
 ### Using docker-compose
