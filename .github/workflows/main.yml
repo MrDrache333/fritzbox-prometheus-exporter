@@ -3,6 +3,8 @@ name: Build and push fritzbox_exporter image
 on:
   push:
     branches: master
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   main:
