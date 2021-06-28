@@ -1,4 +1,4 @@
-FROM golang:rc-alpine3.13 AS builder
+FROM golang:1.16-alpine3.14 AS builder
 RUN go get github.com/sberk42/fritzbox_exporter/
 
 FROM alpine:latest
