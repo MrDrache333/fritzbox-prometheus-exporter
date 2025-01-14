@@ -1,5 +1,5 @@
 FROM golang:1.16-alpine3.14 AS builder
-RUN go get github.com/sberk42/fritzbox_exporter/
+RUN go get github.com/mrdrache333/fritzbox-prometheus-exporter/
 
 FROM alpine:latest
 ENV USERNAME username
